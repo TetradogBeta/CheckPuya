@@ -18,7 +18,7 @@ namespace CheckPuya.Net
         public Uri Picture { get; set; }
         public Uri Mega1080 { get; set; }
         public Uri Mega720 { get; set; }
-        public string[] GetLinksMega() => new string[] {"\n 1080p "+ Mega1080.GetLinkMega().AbsoluteUri,"720p "+ Mega720.GetLinkMega().AbsoluteUri };
+        public string[] GetLinksMega() => new string[] { "\n 1080p " + Mega1080.GetLinkMega().AbsoluteUri, "720p " + Mega720.GetLinkMega().AbsoluteUri };
 
         public static IEnumerable<Capitulo> GetCapitulos(Uri webPuya)
         {
@@ -27,15 +27,21 @@ namespace CheckPuya.Net
             return doc.GetElementbyId("content").GetByTagName("article").Select(nodoArticle =>
             {
                 int indexAnd;
+                HtmlNode[] nodosLinksArray;
                 Capitulo capitulo = new Capitulo();
-                HtmlNode nodoLinks = nodoArticle.GetByClass("entry-content").First();
+                HtmlNode nodoLinks = nodoArticle.GetByClass("entry-content").First().GetByTagName("div").First();
                 capitulo.Page = new Uri(nodoArticle.GetByTagName("h2").First().GetByTagName("a").First().Attributes["href"].Value);
                 capitulo.Picture = new Uri(nodoArticle.GetByTagName("img").First().Attributes["src"].Value);
                 capitulo.Name = nodoArticle.GetByTagName("h2").First().GetByTagName("a").First().InnerText;
-                indexAnd = capitulo.Name.IndexOf('&');
-                capitulo.Name=capitulo.Name.Remove(indexAnd, capitulo.Name.IndexOf(';',indexAnd)-indexAnd+1);
-                capitulo.Mega1080 = new Uri(nodoLinks.GetByTagName("div").First().GetByTagName("a").Last().Attributes["href"].Value);
-                capitulo.Mega720 = new Uri(nodoLinks.GetByTagName("div").Last().GetByTagName("a").Last().Attributes["href"].Value);
+                do
+                {
+                    indexAnd = capitulo.Name.IndexOf('&');
+                    if (indexAnd > 0)
+                        capitulo.Name = capitulo.Name.Remove(indexAnd, capitulo.Name.IndexOf(';', indexAnd) - indexAnd + 1);
+                } while (indexAnd > 0);
+                nodosLinksArray = nodoLinks.GetByTagName("div").ToArray();
+                capitulo.Mega1080 = new Uri(nodosLinksArray[1].GetByTagName("a").Last().Attributes["href"].Value);
+                capitulo.Mega720 = new Uri(nodosLinksArray[2].GetByTagName("a").Last().Attributes["href"].Value);
                 return capitulo;
             });
 

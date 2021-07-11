@@ -10,7 +10,7 @@ namespace CheckPuya.Net
     {
         static void Main(string[] args)
         {
-            const string VERISON = "1.0";
+            const string VERISON = "1.1";
             Cancelation cancelation = new Cancelation();
             Check check = new Check();
             Task tSalir = new Task(new Action(()=> { Console.ReadLine();cancelation.Continue = false; }));
