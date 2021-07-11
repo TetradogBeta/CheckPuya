@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Gabriel.Cat.S.Check" Version="1.0.4" />
+    <PackageReference Include="Gabriel.Cat.S.Check" Version="1.0.7" />
   </ItemGroup>
 
   <ItemGroup>

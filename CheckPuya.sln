@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckPuya.Xamarin", "CheckP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckPuya.Core", "CheckPuya.Core\CheckPuya.Core.csproj", "{195DC64D-E2AA-4B86-9D9F-454EEBB3F287}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckPuya.Xamarin.WPF", "CheckPuya.Xamarin.WPF\CheckPuya.Xamarin.WPF.csproj", "{1DCC8182-F92C-450E-B0CD-863D18151DAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckPuya.Blazor", "CheckPuya.Blazor\CheckPuya.Blazor.csproj", "{ABBEA4AC-46A2-45B0-BDC6-2FA5638B6CA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,14 @@ Global
 		{195DC64D-E2AA-4B86-9D9F-454EEBB3F287}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{195DC64D-E2AA-4B86-9D9F-454EEBB3F287}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{195DC64D-E2AA-4B86-9D9F-454EEBB3F287}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DCC8182-F92C-450E-B0CD-863D18151DAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DCC8182-F92C-450E-B0CD-863D18151DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DCC8182-F92C-450E-B0CD-863D18151DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DCC8182-F92C-450E-B0CD-863D18151DAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABBEA4AC-46A2-45B0-BDC6-2FA5638B6CA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABBEA4AC-46A2-45B0-BDC6-2FA5638B6CA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABBEA4AC-46A2-45B0-BDC6-2FA5638B6CA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABBEA4AC-46A2-45B0-BDC6-2FA5638B6CA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

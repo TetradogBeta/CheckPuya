@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace CypherExample
 {
@@ -195,9 +196,9 @@ namespace CypherExample
             return hex.ToString();
         }
 
-        public static string[] DecryptUri([NotNull] this Uri uriWeb, [NotNull] GetKeyAndDataFromHtmlDelegate methodGetKeyAndData)
+        public static async Task<string[]> DecryptUri([NotNull] this Uri uriWeb, [NotNull] GetKeyAndDataFromHtmlDelegate methodGetKeyAndData)
         {
-            (string key, string data) = methodGetKeyAndData(uriWeb.DownloadString());
+            (string key, string data) = methodGetKeyAndData(await uriWeb.DownloadString());
             string dataDecrypted = Decrypt(data, key);
             return dataDecrypted.Contains('\n')? dataDecrypted.Split('\n'):new string[] {dataDecrypted};
         }

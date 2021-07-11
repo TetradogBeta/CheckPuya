@@ -18,11 +18,19 @@ namespace CheckPuya.Net
         public Uri Picture { get; set; }
         public Uri Mega1080 { get; set; }
         public Uri Mega720 { get; set; }
-        public IEnumerable<Link> GetLinks() => new Link[] { new Link() { TextoAntes = "1080p ", Url = Mega1080.GetLinkMega().AbsoluteUri },new Link(){TextoAntes= "720p " ,Url= Mega720.GetLinkMega().AbsoluteUri } };
-
-        public static IEnumerable<Capitulo> GetCapitulos(Uri webPuya)
+        public IEnumerable<Link> GetLinks()
         {
-            string html = webPuya.DownloadString();
+            Task<Uri> tLink1080 = Mega1080.GetLinkMega();
+            Task<Uri> tLink720 = Mega720.GetLinkMega();
+
+            tLink1080.Wait();
+            tLink720.Wait();
+
+            return new Link[] { new Link() { TextoAntes = "1080p ", Url = tLink1080.Result.AbsoluteUri }, new Link() { TextoAntes = "720p ", Url = tLink720.Result.AbsoluteUri } };
+        }
+        public static async Task<IEnumerable<Capitulo>> GetCapitulos(Uri webPuya)
+        {
+            string html = await webPuya.DownloadString();
             HtmlDocument doc = new HtmlDocument().LoadString(html);
             return doc.GetElementbyId("content").GetByTagName("article").Select(nodoArticle =>
             {
@@ -51,9 +59,9 @@ namespace CheckPuya.Net
     }
     public static class ExtensionCapitulo
     {
-        public static Uri GetLinkMega(this Uri linkMega)
+        public static async Task<Uri> GetLinkMega(this Uri linkMega)
         {
-            return new Uri(linkMega.DecryptUri((html) =>
+            return new Uri((await linkMega.DecryptUri((html) =>
             {
                 string data;
                 Regex regex = new Regex("(<INPUT[^>]*>)");
@@ -62,7 +70,7 @@ namespace CheckPuya.Net
                 match = match.NextMatch();
                 data = match.Value.Split("VALUE=\"")[1].Replace("\">", "");
                 return (key, data);
-            })[0]);
+            }))[0]);
         }
     }
 }
