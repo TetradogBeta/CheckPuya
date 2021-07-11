@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CheckPuya", "CheckPuya\CheckPuya.pyproj", "{4AA75870-D0A0-418F-B93B-6D3C5261A6A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckPuya.Net", "CheckPuya.Net\CheckPuya.Net.csproj", "{4B513A5F-6D8F-4AF6-8EC1-04F2FF8D062E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AA75870-D0A0-418F-B93B-6D3C5261A6A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AA75870-D0A0-418F-B93B-6D3C5261A6A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B513A5F-6D8F-4AF6-8EC1-04F2FF8D062E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B513A5F-6D8F-4AF6-8EC1-04F2FF8D062E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B513A5F-6D8F-4AF6-8EC1-04F2FF8D062E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B513A5F-6D8F-4AF6-8EC1-04F2FF8D062E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4DB1AF94-928F-4371-8742-5D465B7A720E}
+	EndGlobalSection
+EndGlobal
