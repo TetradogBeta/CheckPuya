@@ -11,14 +11,14 @@ using HtmlAgilityPack;
 
 namespace CheckPuya.Net
 {
-    public class Capitulo : IFileMega
+    public class Capitulo : IFile
     {
         public string Name { get; set; }
         public Uri Page { get; set; }
         public Uri Picture { get; set; }
         public Uri Mega1080 { get; set; }
         public Uri Mega720 { get; set; }
-        public string[] GetLinksMega() => new string[] { "\n 1080p " + Mega1080.GetLinkMega().AbsoluteUri, "720p " + Mega720.GetLinkMega().AbsoluteUri };
+        public IEnumerable<Link> GetLinks() => new Link[] { new Link() { TextoAntes = "1080p ", Url = Mega1080.GetLinkMega().AbsoluteUri },new Link(){TextoAntes= "720p " ,Url= Mega720.GetLinkMega().AbsoluteUri } };
 
         public static IEnumerable<Capitulo> GetCapitulos(Uri webPuya)
         {

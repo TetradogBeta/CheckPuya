@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckPuya.Net", "CheckPuya.Net\CheckPuya.Net.csproj", "{4B513A5F-6D8F-4AF6-8EC1-04F2FF8D062E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckPuya.Xamarin.Android", "CheckPuya.Xamarin\CheckPuya.Xamarin.Android\CheckPuya.Xamarin.Android.csproj", "{7D3F5329-158B-4EF6-87EB-3C85E158A53E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckPuya.Xamarin", "CheckPuya.Xamarin\CheckPuya.Xamarin\CheckPuya.Xamarin.csproj", "{FB404247-6374-433C-BA5F-B7C0AF2147DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckPuya.Core", "CheckPuya.Core\CheckPuya.Core.csproj", "{195DC64D-E2AA-4B86-9D9F-454EEBB3F287}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,20 @@ Global
 		{4B513A5F-6D8F-4AF6-8EC1-04F2FF8D062E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B513A5F-6D8F-4AF6-8EC1-04F2FF8D062E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B513A5F-6D8F-4AF6-8EC1-04F2FF8D062E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D3F5329-158B-4EF6-87EB-3C85E158A53E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D3F5329-158B-4EF6-87EB-3C85E158A53E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D3F5329-158B-4EF6-87EB-3C85E158A53E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7D3F5329-158B-4EF6-87EB-3C85E158A53E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D3F5329-158B-4EF6-87EB-3C85E158A53E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D3F5329-158B-4EF6-87EB-3C85E158A53E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FB404247-6374-433C-BA5F-B7C0AF2147DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB404247-6374-433C-BA5F-B7C0AF2147DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB404247-6374-433C-BA5F-B7C0AF2147DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB404247-6374-433C-BA5F-B7C0AF2147DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{195DC64D-E2AA-4B86-9D9F-454EEBB3F287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{195DC64D-E2AA-4B86-9D9F-454EEBB3F287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{195DC64D-E2AA-4B86-9D9F-454EEBB3F287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{195DC64D-E2AA-4B86-9D9F-454EEBB3F287}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

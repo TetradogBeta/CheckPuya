@@ -6,9 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Crypto.AES" Version="1.0.4" />
-    <PackageReference Include="Gabriel.Cat.S.Check" Version="1.0.1" />
-    <PackageReference Include="Gabriel.Cat.S.Xarxa" Version="1.0.1" />
+    <PackageReference Include="Gabriel.Cat.S.Check" Version="1.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CheckPuya.Core\CheckPuya.Core.csproj" />
   </ItemGroup>
 
 </Project>
