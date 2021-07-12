@@ -28,13 +28,13 @@ namespace CheckPuya.Net
             if (!Equals(Mega1080, default)) {
                 tLink1080 = Mega1080.GetLinkMega();
                 tLink1080.Wait();
-                links.Add(new Link() { TextoAntes = "1080p ", Url = tLink1080.Result.AbsoluteUri });
+                links.Add(new Link() { TextoAntes = "1080p ", Url = tLink1080.Result.AbsoluteUri.Contains('%') ? tLink1080.Result.AbsoluteUri.Split('%')[0] : tLink1080.Result.AbsoluteUri });
             }
             if (!Equals(Mega720, default))
             {
                 tLink720 = Mega720.GetLinkMega();
                 tLink720.Wait();
-                links.Add(new Link() { TextoAntes = "720p ", Url = tLink720.Result.AbsoluteUri });
+                links.Add(new Link() { TextoAntes = "720p ", Url = tLink720.Result.AbsoluteUri.Contains('%')? tLink720.Result.AbsoluteUri.Split('%')[0]: tLink720.Result.AbsoluteUri });
             }
             //falta acabar
             return links;
