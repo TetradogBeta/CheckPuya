@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace CypherExample
@@ -196,8 +197,21 @@ namespace CypherExample
             return hex.ToString();
         }
 
-        public static async Task<string[]> DecryptUri([NotNull] this Uri uriWeb, [NotNull] GetKeyAndDataFromHtmlDelegate methodGetKeyAndData)
+        public static async Task<string[]> DecryptUri([NotNull] this Uri uriWeb, GetKeyAndDataFromHtmlDelegate methodGetKeyAndData=default)
         {
+            if (Equals(methodGetKeyAndData, default))
+            {
+                methodGetKeyAndData= (html) =>
+                {
+                    string data;
+                    Regex regex = new Regex("(<INPUT[^>]*>)");
+                    Match match = regex.Match(html).NextMatch();//quito el primero que es el source
+                    string key = match.Value.Split('\'')[1];
+                    match = match.NextMatch();
+                    data = match.Value.Split("VALUE=\"")[1].Replace("\">", "");
+                    return (key, data);
+                };
+            }
             (string key, string data) = methodGetKeyAndData(await uriWeb.DownloadString());
             string dataDecrypted = Decrypt(data, key);
             return dataDecrypted.Contains('\n')? dataDecrypted.Split('\n'):new string[] {dataDecrypted};

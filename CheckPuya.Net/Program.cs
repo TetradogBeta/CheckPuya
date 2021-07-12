@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CypherExample;
@@ -11,7 +12,7 @@ namespace CheckPuya.Net
     {
         static void Main(string[] args)
         {
-            const string VERISON = "1.3";
+            const string VERISON = "1.4";
             Cancelation cancelation = new Cancelation();
             Check check = new Check();
             Task tSalir = new Task(new Action(()=> { Console.ReadLine();cancelation.Continue = false; }));
@@ -23,12 +24,13 @@ namespace CheckPuya.Net
                 check.Publicar(GetCapitulos, cancelation: cancelation).Wait();
             }
             catch (Exception ex) { Console.WriteLine(ex.Message); }
+            Console.ReadLine();
 
         }
 
         private static async Task<IEnumerable<IFile>> GetCapitulos(Uri uriWeb)
         {
-             return await Capitulo.GetCapitulos(uriWeb); 
+             return (await Capitulo.GetCapitulos(uriWeb)).Where(c=>c.IsValido); 
         }
     }
 }
