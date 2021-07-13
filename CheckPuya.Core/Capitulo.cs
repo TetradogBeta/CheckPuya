@@ -36,7 +36,6 @@ namespace CheckPuya.Net
                 tLink720.Wait();
                 links.Add(new Link() { TextoAntes = "720p ", Url = tLink720.Result.AbsoluteUri.Contains('%')? tLink720.Result.AbsoluteUri.Split('%')[0]: tLink720.Result.AbsoluteUri });
             }
-            //falta acabar
             return links;
         }
         public static async Task<IEnumerable<Capitulo>> GetCapitulos(Uri webPuya)
