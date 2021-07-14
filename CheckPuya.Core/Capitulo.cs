@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using CypherExample;
+using JDownloaderClickAndGo;
 using Gabriel.Cat.S.Check;
 using Gabriel.Cat.S.Extension;
 using HtmlAgilityPack;

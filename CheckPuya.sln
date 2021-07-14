@@ -9,11 +9,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckPuya.Xamarin.Android",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckPuya.Xamarin", "CheckPuya.Xamarin\CheckPuya.Xamarin\CheckPuya.Xamarin.csproj", "{FB404247-6374-433C-BA5F-B7C0AF2147DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckPuya.Core", "CheckPuya.Core\CheckPuya.Core.csproj", "{195DC64D-E2AA-4B86-9D9F-454EEBB3F287}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckPuya.Core", "CheckPuya.Core\CheckPuya.Core.csproj", "{195DC64D-E2AA-4B86-9D9F-454EEBB3F287}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckPuya.Xamarin.WPF", "CheckPuya.Xamarin.WPF\CheckPuya.Xamarin.WPF.csproj", "{1DCC8182-F92C-450E-B0CD-863D18151DAB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckPuya.Blazor", "CheckPuya.Blazor\CheckPuya.Blazor.csproj", "{ABBEA4AC-46A2-45B0-BDC6-2FA5638B6CA6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JDownloaderClickAndGo", "JDownloaderClickAndGo\JDownloaderClickAndGo.csproj", "{C5E3389B-145B-4BEC-93AD-32D5EF8E0DF6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestJDownloaderClickAndGo", "TestJDownloaderClickAndGo\TestJDownloaderClickAndGo.csproj", "{4C7B1A4A-BDF0-45F2-9F07-554CC560C71C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JDownloader.Utilities", "JDownloader.Utilities\JDownloader.Utilities.csproj", "{FE9D7AAB-D799-4F52-9B5D-7D7C38321B16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +53,18 @@ Global
 		{ABBEA4AC-46A2-45B0-BDC6-2FA5638B6CA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABBEA4AC-46A2-45B0-BDC6-2FA5638B6CA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABBEA4AC-46A2-45B0-BDC6-2FA5638B6CA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5E3389B-145B-4BEC-93AD-32D5EF8E0DF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5E3389B-145B-4BEC-93AD-32D5EF8E0DF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5E3389B-145B-4BEC-93AD-32D5EF8E0DF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5E3389B-145B-4BEC-93AD-32D5EF8E0DF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C7B1A4A-BDF0-45F2-9F07-554CC560C71C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C7B1A4A-BDF0-45F2-9F07-554CC560C71C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C7B1A4A-BDF0-45F2-9F07-554CC560C71C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C7B1A4A-BDF0-45F2-9F07-554CC560C71C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE9D7AAB-D799-4F52-9B5D-7D7C38321B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE9D7AAB-D799-4F52-9B5D-7D7C38321B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE9D7AAB-D799-4F52-9B5D-7D7C38321B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE9D7AAB-D799-4F52-9B5D-7D7C38321B16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

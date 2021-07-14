@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>dotnet-JDownloaderClickAndGo-A3386F72-9E53-4E49-8B29-589F522762D0</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Gabriel.Cat.S.Utilitats" Version="1.2.3" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JDownloader.Utilities\JDownloader.Utilities.csproj" />
+  </ItemGroup>
+</Project>

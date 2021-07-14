@@ -8,7 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace CypherExample
+namespace JDownloaderClickAndGo
 {
     public delegate (string Key, string DataEncrypted) GetKeyAndDataFromHtmlDelegate([NotNull] string htmlWeb);
     public static class JDownloadClickNLoad
